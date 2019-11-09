@@ -135,7 +135,7 @@ def request_device_readings_mode(device_uuid):
     return 'Endpoint is not implemented', 501
 
 @app.route('/devices/<string:device_uuid>/readings/quartiles/', methods = ['GET'])
-def request_device_readings_mode(device_uuid):
+def request_device_readings_quartiles(device_uuid):
     """
     This endpoint allows clients to GET the 1st and 3rd quartile
     sensor reading value for a device.
