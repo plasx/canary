@@ -60,15 +60,23 @@ Tests can be run via `pytest -v`.
 ## Tasks
 Your task is to fork this repo and complete the following:
 
-- [ ] Add field validation. Only *temperature* and *humidity* sensors are allowed with values between *0* and *100*.
-- [ ] Add logic for query parameters for *type* and *start/end* dates.
-- [ ] Implement the min endpoint.
-- [ ] Implement the max endpoint.
-- [ ] Implement the median endpoint.
-- [ ] Implement the mean endpoint.
-- [ ] Implement the mode endpoint.
-- [ ] Implement the quartile endpoint.
-- [ ] Add and implement the stubbed out unit tests for your changes.
-- [ ] Update the README with any design decisions you made and why.
+- [x] Add field validation. Only *temperature* and *humidity* sensors are allowed with values between *0* and *100*.
+- [x] Add logic for query parameters for *type* and *start/end* dates.
+- [x] Implement the min endpoint.
+- [x] Implement the max endpoint.
+- [x] Implement the median endpoint.
+- [x] Implement the mean endpoint.
+- [x] Implement the mode endpoint.
+- [x] Implement the quartile endpoint.
+- [x] Add and implement the stubbed out unit tests for your changes.
+- [x] Update the README with any design decisions you made and why.
+
+### ADR
+- 11/08/2019 - Renamed 2nd request_device_readings_mode to request_device_readings_quartiles to avoid duplicate function error
+- 11/10/2019 - Filled out unit tests to align with requirements.
+- 11/10/2019 - Built out database calls for each endpoint, utilized statistics library for more pythonic code for median, mean, and mode
+- 11/11/2019 - Created query generator due to too many duplicated lines with almost similar sql queries
+- 11/11/2019 - implemented numpy due to the code reduction for quartiles
+- 11/11/2019 - added more data seeds in the setup of unit tests due to some cases not being able to happen unless there were additional sets. this enables testing for humidity and temperature
 
 When you're finished, send your git repo link to Michael Klein at michael@canary.is. If you have any questions, please do not hesitate to reach out!
